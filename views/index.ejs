@@ -4,6 +4,7 @@
     <title><%= title %></title>
     <!-- js -->
     <script type='text/javascript' src='/javascripts/main.js'></script>
+    <script type='text/javascript' src='/javascripts/rainyday.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -14,9 +15,38 @@
       ga('create', 'UA-58665368-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <style type="text/css">
+      html, body, div, img {
+        font-family: helvetica;
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        overflow: hidden;
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      #sources {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        z-index: 999;
+      }
+      #sources a {
+        color: white;
+      }
+    </style>
   </head>
   <body onload="getData()">
-    <div id="container"></div>
-    <div>Data from <a href="http://openweathermap.org/">Open Weather Map</a><div>
+    <img id="backgroundImage" src="/images/seattle.jpg"></img>
+    <div id="sources">
+      <div id="container" ></div>
+      <div>Weather data from <a href="http://openweathermap.org/">Open Weather Map</a><div>
+      <div>Rain drop animation from <a href="http://maroslaw.github.io/rainyday.js">rainyday.js</a></div>
+    </div>
   </body>
 </html>
